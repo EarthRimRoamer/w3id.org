@@ -1,0 +1,18 @@
+# Persian Ontology Dictionary
+#
+# This space is administered by:
+# [Pooya Parvaresh]
+# [parvareshpooya@gmail.com]
+# GitHub username: EarthRimRoamer
+
+RewriteEngine on
+
+# Redirect the base namespace to your repository
+RewriteRule ^$ https://github.com/EarthRimRoamer/persian-onto [R=302,L]
+
+# Redirect ontology files to their raw location
+RewriteRule ^core$ https://raw.githubusercontent.com/EarthRimRoamer/persian-onto/main/ontology/core.ttl [R=302,L]
+RewriteRule ^lexicon$ https://raw.githubusercontent.com/EarthRimRoamer/persian-onto/main/lexicon/lexicon.ttl [R=302,L]
+
+# Redirect all other paths to the repository
+RewriteRule ^(.*)$ https://github.com/EarthRimRoamer/persian-onto/$1 [R=302,L]
